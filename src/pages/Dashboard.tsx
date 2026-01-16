@@ -2,8 +2,8 @@ import { useAppSelector } from '@/store/hooks';
 import MainLayout from '@/components/layout/MainLayout';
 import StatCard from '@/components/common/StatCard';
 import RequestCard from '@/components/common/RequestCard';
+import Chatbot from '@/components/chat/Chatbot';
 import { Clock, CheckCircle, XCircle, AlertTriangle, TrendingUp } from 'lucide-react';
-
 const Dashboard = () => {
   const user = useAppSelector((state) => state.auth.user);
   const requests = useAppSelector((state) => state.requests.requests);
@@ -125,6 +125,7 @@ const Dashboard = () => {
           )}
         </div>
       </div>
+      <Chatbot />
     </MainLayout>
   );
 };
